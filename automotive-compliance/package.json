@@ -1,0 +1,18 @@
+{
+  "name": "automotive-compliance",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["contracts", "backend", "frontend"],
+  "scripts": {
+    "install:all": "npm install",
+    "chain": "npm --workspace contracts run node",
+    "contracts:compile": "npm --workspace contracts run compile",
+    "contracts:test": "npm --workspace contracts test",
+    "contracts:deploy": "npm --workspace contracts run deploy:local",
+    "seed": "npm --workspace contracts run seed",
+    "backend:dev": "npm --workspace backend run dev",
+    "frontend:dev": "npm --workspace frontend run dev",
+    "test": "npm run contracts:test && npm --workspace backend test && npm --workspace frontend test"
+  },
+  "devDependencies": {"concurrently": "^9.1.2"}
+}

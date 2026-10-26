@@ -1,0 +1,3 @@
+export interface Batch {batchId:string;batchCode?:string;supplier:string;componentName:string;componentType:string;quantity:number;manufacturingDate:string;specificationsRef:string;registrationTimestamp:number;decision:string;decisionReason:string;decisionTimestamp:number;status:number}
+export interface TestRecord {testId:string;testCode?:string;batchId:string;testingLab:string;testType:string;result:'PASS'|'FAIL';reportHash:string;documentRef:string;submittedAt:number;expiresAt:number;revoked:boolean;revocationReason:string}
+export const statuses=['REGISTERED','TESTING_IN_PROGRESS','COMPLIANT_PENDING_APPROVAL','APPROVED','REJECTED','NON_COMPLIANT','REASSESSMENT_REQUIRED'];
